@@ -33,13 +33,7 @@ inline CPUIdentity readCPUIdentity() {
 }
 
 inline bool matchesCPUProfile(const CPUIdentity &cpu) {
-    if (cpu.basic.a < 6 || cpu.extended.a < 0x80000004 ||
-        cpu.basic.b != 0x756e6547 || cpu.basic.d != 0x49656e69 ||
-        cpu.basic.c != 0x6c65746e ||
-        (cpu.signature.a & 0x0fff0ff0) != 0x000b0670 ||
-        (cpu.power.a & (1U << 7)) == 0) return false;
-
-    // The 54 -> 69 endpoint was validated on this SKU, not every model B7 CPU.
+    if (cpu.extended.a < 0x80000004) return false;
     constexpr char expected[] = "13th Gen Intel(R) Core(TM) i9-13900HX";
     unsigned offset = 0;
     while (offset < 48 && cpu.brand[offset] == ' ') ++offset;

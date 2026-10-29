@@ -7,8 +7,8 @@
   <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
   <key>CFBundleName</key><string>HWPRequestFix</string>
   <key>CFBundlePackageType</key><string>KEXT</string>
-  <key>CFBundleShortVersionString</key><string>0.1.12</string>
-  <key>CFBundleVersion</key><string>0.1.12</string>
+  <key>CFBundleShortVersionString</key><string>0.2.2</string>
+  <key>CFBundleVersion</key><string>0.2.2</string>
   <key>OSBundleRequired</key><string>Root</string>
   <key>OSBundleLibraries</key><dict>
     <key>as.vit9696.Lilu</key><string>1.7.2</string>
